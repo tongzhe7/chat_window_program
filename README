@@ -1,0 +1,35 @@
+This project is used to compile end-to-end communication in local network
+environment chat program.
+
+The structure of project is as follows:
+.
+├── chat_window.glade
+├── Client.c
+├── Makefile
+├── README
+└── Server.c
+
+chat_window.glade file is UI file.
+Client.c and Server.c is source file.
+README is an introductory document.
+Makefile is a profile that is created for make.
+
+
+1. Before building the binary(architecture is amd64), please make sure the library "libgtk2.0" is
+installed, If not, please refer to the following command:
+	$ sudo apt-get update
+	$ sudo apt-get install libgtk2.0-dev
+
+2. build binary
+type the following command in current project path for building binary:
+	$ make
+
+3. run program
+You should run server program firstly, and then run the client program:
+	$ ./Server
+	$ ./Client
+
+4. Serve and client can run on different host, if it's necessary, you should run
+its as follow:
+	$ ./Server ipaddress port
+	$ ./Client ipaddress port
